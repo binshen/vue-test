@@ -1,30 +1,24 @@
 <template>
   <div id="app">
-    <button @click="login">登录</button>
-    <br>
-    <button @click="logout">退出</button>
+    <div v-bind:class="{ active: isActive }"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Test3',
-
-  methods: {
-    login () {
-      this.$store.dispatch('user/login', { username: 'username', password: 'password' }).then((res) => {
-        alert(JSON.stringify(res))
-      })
-    },
-    logout () {
-      this.$store.dispatch('user/logout', {}).then((res) => {
-        alert(JSON.stringify(res))
-      })
+  name: 'Test7',
+  data () {
+    return {
+      isActive: false
     }
   }
 }
 </script>
 
 <style scoped>
-
+  .active {
+    width: 200px;
+    height: 200px;
+    background: green;
+  }
 </style>

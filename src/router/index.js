@@ -9,6 +9,7 @@ import Test4 from '@/components/Test4'
 import Test5 from '@/components/Test5'
 import Test6 from '@/components/Test6'
 import Test7 from '@/components/Test7'
+import Test8 from '@/components/Test8'
 
 Vue.use(Router)
 
@@ -58,6 +59,11 @@ export default new Router({
       path: '/test7',
       name: 'Test7',
       component: Test7
+    },
+    {
+      path: '/test8',
+      name: 'Test8',
+      component: Test8
     }
   ]
 })
