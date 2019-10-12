@@ -9,6 +9,19 @@ Vue.config.productionTip = false
 
 require('../mock')
 
+Vue.component('my-component')
+Vue.component('my-component-2', {
+  template: '<h1>自定义组件222</h1>'
+})
+
+Vue.directive('my-focus', {
+  // 当绑定元素插入到 DOM 中。
+  inserted: function (el) {
+    // 聚焦元素
+    el.focus()
+  }
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

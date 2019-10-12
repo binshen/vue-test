@@ -2,7 +2,7 @@
   <div id="app">
     <p>{{ message }}</p>
     <p>{{ message.split('').reverse().join('|')}}</p>
-    <input v-model="input_text" @input="change_text"/>
+    <input v-model="input_text" v-on:input="change_text"/>
     <br>
 
     {{5+5}}<br>
