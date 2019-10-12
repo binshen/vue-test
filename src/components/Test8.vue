@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    {{name}}: {{token}}
+    {{id}} - {{name}}: {{token}}
   </div>
 </template>
 
@@ -9,11 +9,13 @@ export default {
   name: 'Test8',
   data () {
     return {
+      id: 0,
       name: '',
       token: ''
     }
   },
   created () {
+    this.id = this.$route.params.id
     this.name = this.$store.getters.name
     this.token = this.$store.getters.token
   }

@@ -14,6 +14,8 @@ export default {
     login () {
       this.$store.dispatch('user/login', { username: 'username', password: 'password' }).then((res) => {
         alert(JSON.stringify(res))
+        this.$router.push({name: 'Test8', params: {id: res.id}})
+        // this.$router.push({path: '/test8', query: {id: res.id}})
       })
     },
     logout () {
